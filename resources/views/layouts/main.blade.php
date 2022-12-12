@@ -56,7 +56,7 @@
       <li><a class="text-sm text-rose-200 hover:text-rose-50" href="/testimoni">TESTIMONIONALS</a></li>
     </ul>
     <a class="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200"
-      href="#">Members</a>
+      href=" {{ route('login') }}">Members</a>
   </nav>
   <div class="navbar-menu relative z-50 hidden">
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>

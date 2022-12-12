@@ -35,6 +35,18 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/reservasi', function () {
+    return view('reservasi');
+})->middleware(['auth', 'verified'])->name('reservasi');
+
+Route::get('/cek-reservasi', function () {
+    return view('cek-reservasi');
+})->middleware(['auth', 'verified'])->name('cek-reservasi');
+
+Route::get('/feedback', function () {
+    return view('feedback');
+})->middleware(['auth', 'verified'])->name('feedback');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
