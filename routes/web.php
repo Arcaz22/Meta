@@ -16,7 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/fasilitas', function () {
+    return view('fasilitas');
+});
+
+Route::get('/outlet', function () {
+    return view('outlet');
+});
+
+Route::get('/testimoni', function () {
+    return view('testimoni');
 });
 
 Route::get('/dashboard', function () {
@@ -32,4 +44,4 @@ Route::middleware('auth')->group(function () {
 Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
