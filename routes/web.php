@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -15,20 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*      Admin Route      */
+Route::prefix('admin')->group(function() {
+    Route::get('/login',[AdminController::class, 'Index'])->name('login_from');
+    Route::post('/login/owner',[AdminController::class, 'Login'])->name('admin.login');
+    Route::get('/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
+    Route::get('/logout',[AdminController::class, 'AdminLogout'])->name('admin.logout')->middleware('admin');
+    Route::get('/register',[AdminController::class, 'AdminRegister'])->name('admin.register');
+    Route::post('/register/create',[AdminController::class, 'AdminRegisterCreate'])->name('admin.register.create');
+});
+/*      END Admin Route      */
+
+
 Route::get('/', function () {
     return view('home');
-});
-
-Route::get('/fasilitas', function () {
-    return view('fasilitas');
-});
-
-Route::get('/outlet', function () {
-    return view('outlet');
-});
-
-Route::get('/testimoni', function () {
-    return view('testimoni');
 });
 
 Route::get('/dashboard', function () {

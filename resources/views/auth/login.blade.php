@@ -51,7 +51,7 @@
                 </x-primary-button>
             </div>
         </form>
-        <div class="pt-5">
+        <div class="pt-1">
             <a href="{{ route('google-auth') }}" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                 <!-- Heroicon name: mini/lock-closed -->
@@ -59,7 +59,15 @@
               Sign in with Google
             </a>
         </div>
-        <div class="pt-5">
+        <div class="pt-1">
+            <a href="{{ route('admin.dashboard') }}" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <!-- Heroicon name: mini/lock-closed -->
+              </span>
+              Sign in Admin
+            </a>
+        </div>
+        <div class="pt-1">
             <a href="{{ route('register') }}" class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
               <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                 <!-- Heroicon name: mini/lock-closed -->

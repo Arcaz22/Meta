@@ -82,6 +82,15 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('reservasi')" :active="request()->routeIs('reservasi')">
+                {{ __('Reservasi') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('cek-reservasi')" :active="request()->routeIs('cek-reservasi')">
+                {{ __('Cek reservasi') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('feedback')" :active="request()->routeIs('feedback')">
+                {{ __('Feedback') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
