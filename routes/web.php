@@ -16,6 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*     Landing Page      */
+Route::get('/', function () {
+    return view('home.home');
+});
+
+Route::get('/fasilitas', function () {
+    return view('home.fasilitas');
+});
+
+Route::get('/outlet', function () {
+    return view('home.outlet');
+});
+
+Route::get('/testimoni', function () {
+    return view('home.testimoni');
+});
+/*     End Landing Page      */
+
 /*      Admin Route      */
 Route::prefix('admin')->group(function() {
     Route::get('/login',[AdminController::class, 'Index'])->name('login_from');
@@ -27,11 +45,7 @@ Route::prefix('admin')->group(function() {
 });
 /*      END Admin Route      */
 
-
-Route::get('/', function () {
-    return view('home');
-});
-
+/*     User Route */
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -47,6 +61,7 @@ Route::get('/cek-reservasi', function () {
 Route::get('/feedback', function () {
     return view('feedback');
 })->middleware(['auth', 'verified'])->name('feedback');
+/*     End User Route */
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -54,7 +69,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+/*     Login Google */
 Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('google-auth');
 Route::get('auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
+/*     EndLogin Google */
 
 require __DIR__ . '/auth.php';

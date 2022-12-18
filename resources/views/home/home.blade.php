@@ -1,10 +1,10 @@
-@extends('layouts.main')
+@extends('home.layouts.main')
 @section('container')
 
 <div id="home" name='home' class='w-full h-screen bg-rose-50'>
   <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
     <div>
-      <h1 class='text-4xl sm:text-7xl font-bold inline border-b-4 border-pink-600 '>MetaTrans</h1>
+      <h1 class='text-4xl sm:text-7xl font-bold inline border-b-4 border-pink-600'>MetaTrans</h1>
     </div>
     <br>
 
@@ -22,6 +22,5 @@
     </div>
   </div>
 </div>
-
 
 @endsection

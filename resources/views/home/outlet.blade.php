@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('home.layouts.main')
 @section('container')
 
 <div id="outlet" name='outlet' class='text-gray-600 text-center'>

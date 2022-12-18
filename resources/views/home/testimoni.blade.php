@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('home.layouts.main')
 @section('container')
 
 <div id="contact" name='contact' class='w-full h-screen flex justify-center items-center p-6'>
