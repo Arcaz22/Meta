@@ -51,19 +51,19 @@ Route::prefix('admin')->group(function () {
 
 /*     User Route */
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('.user.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/reservasi', function () {
-    return view('reservasi');
+    return view('.user.reservasi');
 })->middleware(['auth', 'verified'])->name('reservasi');
 
 Route::get('/cek-reservasi', function () {
-    return view('cek-reservasi');
+    return view('.user.cek-reservasi');
 })->middleware(['auth', 'verified'])->name('cek-reservasi');
 
 Route::get('/feedback', function () {
-    return view('feedback');
+    return view('.user.feedback');
 })->middleware(['auth', 'verified'])->name('feedback');
 /*     End User Route */
 
