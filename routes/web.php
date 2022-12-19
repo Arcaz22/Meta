@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReservasiController;
+use App\Models\Reservasi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,9 +52,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/reservasi', function () {
-    return view('reservasi');
-})->middleware(['auth', 'verified'])->name('reservasi');
+// Route::get('/reservasi', function () {
+//     return view('reservasi');
+// })->middleware(['auth', 'verified'])->name('reservasi');
+
+Route::resource('/reservasi', ReservasiController::class)->middleware(['auth', 'verified']);
 
 Route::get('/cek-reservasi', function () {
     return view('cek-reservasi');
