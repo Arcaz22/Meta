@@ -14,8 +14,8 @@
   @include('home.layouts.navbar')
 
   <!-- Content -->
-  <div id="home" name='home' class='w-full h-screen bg-rose-50'>
-    <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+  <div id="home" name='home' class='w-full bg-[#ccd6f6]'>
+    <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center'>
 
       @yield('container')
 
@@ -23,7 +23,7 @@
   </div>
 
   {{-- footer --}}
-  @include('home.layouts.footer')
+  {{-- @include('home.layouts.footer') --}}
   
   @vite('resources/js/index.js')
 </body>

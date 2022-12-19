@@ -2,7 +2,7 @@
 @section('container')
 
 <div id="outlet" name='outlet' class='text-gray-600 text-center'>
-  <div class='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+  <div class='max-w-[1000px] mx-auto p-4 flex flex-col justify-center'>
     <div class="mt-24">
       <p class='text-4xl font-bold inline border-b-4 border-pink-600 '>OUTLET</p>
     </div>
@@ -11,7 +11,7 @@
       <div class="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl mb-12">
         <div class="flex flex-col rounded-lg shadow-lg overflow-hidden ">
           <div class="flex-shrink-0">
-            <img class="h-48 w-full bg-white" src="img/bdg.png" alt="">
+            <img class="h-48 w-full bg-white " src="img/bdg.png" alt="">
           </div>
           <div class="flex-1 bg-white p-6 flex flex-col justify-between">
             <div class="flex-1">

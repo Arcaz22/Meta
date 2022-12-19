@@ -2,7 +2,7 @@
 @section('container')
 
 <div id="fasilitas" name='fasilitas' class=' text-gray-600 text-center'>
-  <div class='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+  <div class='max-w-[1000px] mx-auto p-4 flex flex-col justify-center pt-20 h-screen'>
     <div>
       <p class='text-4xl font-bold inline border-b-4 border-pink-600 '>FASILITAS</p>
     </div>

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /*     Landing Page      */
+
 Route::get('/', function () {
     return view('home.home');
 });
@@ -32,16 +33,19 @@ Route::get('/outlet', function () {
 Route::get('/testimoni', function () {
     return view('home.testimoni');
 });
+Route::get('/about', function () {
+    return view('home.about');
+});
 /*     End Landing Page      */
 
 /*      Admin Route      */
-Route::prefix('admin')->group(function() {
-    Route::get('/login',[AdminController::class, 'Index'])->name('login_from');
-    Route::post('/login/owner',[AdminController::class, 'Login'])->name('admin.login');
-    Route::get('/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
-    Route::get('/logout',[AdminController::class, 'AdminLogout'])->name('admin.logout')->middleware('admin');
-    Route::get('/register',[AdminController::class, 'AdminRegister'])->name('admin.register');
-    Route::post('/register/create',[AdminController::class, 'AdminRegisterCreate'])->name('admin.register.create');
+Route::prefix('admin')->group(function () {
+    Route::get('/login', [AdminController::class, 'Index'])->name('login_from');
+    Route::post('/login/owner', [AdminController::class, 'Login'])->name('admin.login');
+    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
+    Route::get('/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout')->middleware('admin');
+    Route::get('/register', [AdminController::class, 'AdminRegister'])->name('admin.register');
+    Route::post('/register/create', [AdminController::class, 'AdminRegisterCreate'])->name('admin.register.create');
 });
 /*      END Admin Route      */
 
