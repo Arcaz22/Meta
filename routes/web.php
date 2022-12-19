@@ -63,7 +63,9 @@ Route::get('/dashboard', function () {
 Route::resource('/reservasi', ReservasiController::class)->middleware(['auth', 'verified']);
 
 Route::get('/cek-reservasi', function () {
-    return view('.user.cek-reservasi');
+    return view('.user.cek-reservasi', [
+        'reservasis' => Reservasi::all()
+    ]);
 })->middleware(['auth', 'verified'])->name('cek-reservasi');
 
 Route::get('/feedback', function () {
