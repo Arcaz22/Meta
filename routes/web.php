@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /*     Landing Page      */
+
 Route::get('/', function () {
     return view('home.home');
 });
@@ -34,36 +35,45 @@ Route::get('/outlet', function () {
 Route::get('/testimoni', function () {
     return view('home.testimoni');
 });
+Route::get('/about', function () {
+    return view('home.about');
+});
 /*     End Landing Page      */
 
 /*      Admin Route      */
-Route::prefix('admin')->group(function() {
-    Route::get('/login',[AdminController::class, 'Index'])->name('login_from');
-    Route::post('/login/owner',[AdminController::class, 'Login'])->name('admin.login');
-    Route::get('/dashboard',[AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
-    Route::get('/logout',[AdminController::class, 'AdminLogout'])->name('admin.logout')->middleware('admin');
-    Route::get('/register',[AdminController::class, 'AdminRegister'])->name('admin.register');
-    Route::post('/register/create',[AdminController::class, 'AdminRegisterCreate'])->name('admin.register.create');
+Route::prefix('admin')->group(function () {
+    Route::get('/login', [AdminController::class, 'Index'])->name('login_from');
+    Route::post('/login/owner', [AdminController::class, 'Login'])->name('admin.login');
+    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
+    Route::get('/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout')->middleware('admin');
+    Route::get('/register', [AdminController::class, 'AdminRegister'])->name('admin.register');
+    Route::post('/register/create', [AdminController::class, 'AdminRegisterCreate'])->name('admin.register.create');
 });
 /*      END Admin Route      */
 
 /*     User Route */
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('.user.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+<<<<<<< HEAD
 // Route::get('/reservasi', function () {
 //     return view('reservasi');
 // })->middleware(['auth', 'verified'])->name('reservasi');
 
 Route::resource('/reservasi', ReservasiController::class)->middleware(['auth', 'verified']);
+=======
+Route::get('/reservasi', function () {
+    return view('.user.reservasi');
+})->middleware(['auth', 'verified'])->name('reservasi');
+>>>>>>> 848bf82ff80c890b99f5da2c03cb86185b270f13
 
 Route::get('/cek-reservasi', function () {
-    return view('cek-reservasi');
+    return view('.user.cek-reservasi');
 })->middleware(['auth', 'verified'])->name('cek-reservasi');
 
 Route::get('/feedback', function () {
-    return view('feedback');
+    return view('.user.feedback');
 })->middleware(['auth', 'verified'])->name('feedback');
 /*     End User Route */
 
