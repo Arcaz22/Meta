@@ -56,17 +56,11 @@ Route::get('/dashboard', function () {
     return view('.user.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-<<<<<<< HEAD
 // Route::get('/reservasi', function () {
 //     return view('reservasi');
 // })->middleware(['auth', 'verified'])->name('reservasi');
 
 Route::resource('/reservasi', ReservasiController::class)->middleware(['auth', 'verified']);
-=======
-Route::get('/reservasi', function () {
-    return view('.user.reservasi');
-})->middleware(['auth', 'verified'])->name('reservasi');
->>>>>>> 848bf82ff80c890b99f5da2c03cb86185b270f13
 
 Route::get('/cek-reservasi', function () {
     return view('.user.cek-reservasi');

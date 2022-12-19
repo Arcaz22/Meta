@@ -82,7 +82,7 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('reservasi')" :active="request()->routeIs('reservasi')">
+            <x-responsive-nav-link :href="route('reservasi.index')" :active="request()->routeIs('reservasi.index')">
                 {{ __('Reservasi') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('cek-reservasi')" :active="request()->routeIs('cek-reservasi')">
