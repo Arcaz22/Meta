@@ -52,10 +52,6 @@ Route::prefix('admin')->group(function () {
 /*      END Admin Route      */
 
 /*     User Route */
-Route::get('/dashboard', function () {
-    return view('.user.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 // Route::get('/reservasi', function () {
 //     return view('reservasi');
 // })->middleware(['auth', 'verified'])->name('reservasi');

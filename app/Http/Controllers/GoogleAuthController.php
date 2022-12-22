@@ -23,7 +23,7 @@ class GoogleAuthController extends Controller
             if($findUser)
             {
                 Auth::login($findUser);
-                return redirect()->intended('dashboard');
+                return redirect()->intended('reservasi');
             } else {
                 $newUser = User::create([
                     'name' => $user->getName(),
@@ -32,7 +32,7 @@ class GoogleAuthController extends Controller
                     'password' => bcrypt('12345678')
                 ]);
                 Auth::login($newUser);
-                return redirect()->intended('dashboard');
+                return redirect()->intended('reservasi');
             }
         } catch (\Throwable $th) {
             dd('Something went wrong! ' . $th->getMessage());
