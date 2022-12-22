@@ -33,19 +33,23 @@ class AdminController extends Controller
         return redirect()->route('admin.dashboard')->with('error', 'Admin Logout Successfully');
     }
 
-    public function AdminRegister() {
-        return view('admin.admin_register');
+    public function cekReservasi() {
+        return view('admin.cek-reservasi');
     }
 
-    public function AdminRegisterCreate(Request $request) {
-        // dd($request->all());
-        $check = $request->all();
-        Admin::insert([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'created_at' => Carbon::now(),
-        ]);
-        return redirect()->route('admin.dashboard')->with('error', 'Admin Created Successfully');
-    }
+    // public function AdminRegister() {
+    //     return view('admin.admin_register');
+    // }
+
+    // public function AdminRegisterCreate(Request $request) {
+    //     // dd($request->all());
+    //     $check = $request->all();
+    //     Admin::insert([
+    //         'name' => $request->name,
+    //         'email' => $request->email,
+    //         'password' => Hash::make($request->password),
+    //         'created_at' => Carbon::now(),
+    //     ]);
+    //     return redirect()->route('admin.dashboard')->with('error', 'Admin Created Successfully');
+    // }
 }

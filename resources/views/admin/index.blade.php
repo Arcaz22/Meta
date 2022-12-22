@@ -1,10 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.sidebar')
 @section('container')
-    
-<h5 class="text-white">
-    Welcome Back || User
-  </h5>
-<div class=" mt-8 grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 ">
+
+<div class="grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 ">
   <!--Grid starts here-->
   <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
     <div>
@@ -52,30 +49,69 @@
     </div>
   </div>
 </div>
-<div class="-mx-4 mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 md:rounded-lg">
-  <table class="min-w-full divide-y divide-gray-300">
+
+<div class="w-full overflow-x-auto shadow ring-1 ring-black ring-opacity-5 rounded-lg mx-auto">
+  <table class="w-full divide-y divide-gray-300">
     <thead class="bg-gray-50">
       <tr>
-        <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Nama</th>
-        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Role</th>
-        <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
-          <span class="sr-only">Edit</span>
-        </th>
+        <th scope="col" class="px-4 py-2 text-left text- font-semibold text-gray-900">Nama</th>
+        <th scope="col" class="px-4 py-2 text-left text- font-semibold text-gray-900">Role</th>
+        <th scope="col" class="text-left text- font-semibold text-gray-900">Edit</th>
       </tr>
     </thead>
     <tbody class="divide-y divide-gray-200 bg-white">
       <tr>
-        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Lindsay Walton</td>
-        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Front-end Developer</td>
-        <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-          <button class="pr-1"><a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a></button>
-          <button class="pl-1"><a href="#" class="text-indigo-600 hover:text-indigo-900">Hapus</a></button>
-        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-900">Udin</td>
+        <td class="whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-900">user</td>
+        <td class="whitespace-nowrap font-medium text-gray-900">rubah ke admin</td>
       </tr>
-
-      <!-- More people... -->
     </tbody>
   </table>
+</div>
+<div class="px-4 py-5 flex items-center justify-between sm:px-6">
+  <div class="flex-1 flex justify-between sm:hidden">
+    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Previous </a>
+    <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Next </a>
+  </div>
+  <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+    <div>
+      <p class="text-sm text-gray-700">
+        Showing
+        <span class="font-medium">1</span>
+        to
+        <span class="font-medium">10</span>
+        of
+        <span class="font-medium">97</span>
+        results
+      </p>
+    </div>
+    <div>
+      <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+          <span class="sr-only">Previous</span>
+          <!-- Heroicon name: solid/chevron-left -->
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+        <a href="#" aria-current="page" class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium"> 1 </a>
+        <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"> 2 </a>
+        <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"> 3 </a>
+        <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700"> ... </span>
+        <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"> 8 </a>
+        <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"> 9 </a>
+        <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"> 10 </a>
+        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+          <span class="sr-only">Next</span>
+          <!-- Heroicon name: solid/chevron-right -->
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </div>
 </div>
 
 @endsection
