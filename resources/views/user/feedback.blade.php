@@ -10,33 +10,52 @@
 </head>
 <body>
     
-   <x-app-layout>
-    <div name='about' class='w-full h-screen bg-[#0a192f] text-gray-300'>
-      <div class='flex flex-col justify-center items-center w-full h-full'>
-        <div class='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
+  <x-app-layout>
+    <div name='feedback' class='w-full h-screen'>
+      <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+        <div class='sm:text-left pb-8 pl-4'>
+          <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>
+            Feedback
+          </p>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="flex-shrink-0">
+            <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
           </div>
-          <div class='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-            <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-              <div class="sm:col-span-2">
-                <label for="company" class="block text-sm font-medium text-gray-700">Nama</label>
-                <div class="mt-1">
-                  <input type="text" name="company" id="company" autocomplete="organization" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+          <div class="min-w-0 flex-1">
+            <form action="#" class="relative">
+              <div class="border border-gray-300 rounded-lg shadow-sm overflow-hidden focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500">
+                <label for="comment" class="sr-only">Add your comment</label>
+                <textarea rows="3" name="comment" id="comment" class="block w-full py-3 border-0 resize-none focus:ring-0 sm:text-sm" placeholder="Add your comment..."></textarea>
+        
+                <!-- Spacer element to match the height of the toolbar -->
+                <div class="py-2" aria-hidden="true">
+                  <!-- Matches height of button in toolbar (1px border + 36px content height) -->
+                  <div class="py-px">
+                    <div class="h-9"></div>
+                  </div>
                 </div>
               </div>
-              <div class="sm:col-span-2">
-                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                <div class="mt-1">
-                  <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"></textarea>
+        
+              <div class="absolute bottom-0 inset-x-0 pl-3 pr-2 py-2 flex justify-between">
+                <div class="flex items-center space-x-5">
+                  <div class="flex items-center">
+                    <button type="button" class="-m-2.5 w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-500">
+                      <!-- Heroicon name: solid/paper-clip -->
+                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="sr-only">Attach a file</span>
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div class="sm:col-span-2">
-                <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Kirim</button>
+                <div class="flex-shrink-0">
+                  <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Post</button>
+                </div>
               </div>
             </form>
-            <div class='sm:text-right text-4xl font-bold'>
-              <p>Hi. I'm Sai Kumar, nice to meet you. Please take a look around.</p>
-            </div>
           </div>
+        </div>
       </div>
     </div>
   </x-app-layout>

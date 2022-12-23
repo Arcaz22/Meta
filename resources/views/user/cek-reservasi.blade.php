@@ -11,10 +11,10 @@
 <body>
     
     <x-app-layout>
-    <div id="home" name='home' class='w-full h-screen overflow-y-hidden bg-[#0a192f]'>
+    <div id="home" name='home' class='w-full h-screen overflow-y-hidden'>
       <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <div>
-          <p class='text-4xl text-white font-bold inline border-b-4 border-pink-600 '>Cek Reservasi</p>
+          <p class='text-black text-4xl text-white font-bold inline border-b-4 border-pink-600 '>Cek Reservasi</p>
       </div>
           <div class="mt-8 flex flex-col">
             <table class="min-w-full divide-y divide-gray-300">
