@@ -16,7 +16,7 @@ class ReservasiController extends Controller
      */
     public function index()
     {
-        return view('reservasi', [
+        return view('user.reservasi', [
             'reservasis' => Reservasi::all(),
             'jurusans' => Jurusan::all(),
         ]);

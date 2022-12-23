@@ -23,9 +23,6 @@
                 <td>
                     {{ $js->kota_tujuan }}
                 </td>
-                <td>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, omnis? Expedita omnis facilis consectetur, voluptatem explicabo molestiae laborum sit quaerat placeat fugiat iste similique architecto labore, maxime laboriosam eum. Aut.
-                </td>
             </tr>
             @endforeach
         </tbody>
