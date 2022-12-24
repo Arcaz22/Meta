@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
+use App\Models\Reservasi;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,7 +17,10 @@ class AdminController extends Controller
     }
 
     public function Dashboard() {
-        return view('admin.index');
+        $jumlah_user = User::count();
+        $jumlah_memesan = Reservasi::count();
+        $user = User::get()->toQuery()->paginate(3);
+        return view('admin.index', compact('user', 'jumlah_user', 'jumlah_memesan'));
     }
 
     public function Login(Request $request) {
@@ -30,12 +35,17 @@ class AdminController extends Controller
 
     public function AdminLogout() {
         Auth::guard('admin')->logout();
-        return redirect()->route('admin.dashboard')->with('error', 'Admin Logout Successfully');
+        return redirect()->route('login')->with('error', 'Admin Logout Successfully');
     }
 
     public function cekReservasi() {
         return view('admin.cek-reservasi');
     }
+
+    // public function destroy(User $user) {
+    //     $user->delete('$id');
+    //     return redirect()->route('admin.index')->with('success', 'User telah dihapus');  
+    // }
 
     // public function AdminRegister() {
     //     return view('admin.admin_register');
