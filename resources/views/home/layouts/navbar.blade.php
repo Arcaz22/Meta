@@ -1,6 +1,6 @@
 <nav class="bg-[#0a192f] fixed w-full h-[60px] flex justify-between items-center px-4 shadow-md">
   <a class="text-3xl font-bold leading-none" href="/reservasi">
-    <img class="rounded-sm" src="img/logo-1.png" alt="">
+    <img class="h-10 w-15 rounded-sm ml-12" src="img/logo-1.png" alt="">
   </a>
   <div class="lg:hidden">
     <button class="navbar-burger flex items-center text-rose-200 p-3">
@@ -11,8 +11,10 @@
     </button>
   </div>
   <ul
-    class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-    <li><a class="text-sm text-rose-200 hover:text-rose-50" href="/">HOME</a></li>
+    class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+    <li>
+      <a class=" text-sm text-rose-200 hover:text-rose-50" href="/">HOME</a>
+    </li>
     <li class="text-gray-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
         viewBox="0 0 24 24">
@@ -53,7 +55,7 @@
   <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
   <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
     <div class="flex items-center mb-8">
-      <a class="mr-auto text-3xl font-bold leading-none" href="#">
+      <a class="mr-auto text-3xl font-bold leading-none" href="/reservasi">
         <img class="" src="img/logo-1.png" alt="">
       </a>
       <button class="navbar-close">
