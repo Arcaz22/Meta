@@ -11,10 +11,10 @@
 <body>
     
     <x-app-layout>
-    <div id="home" name='home' class='w-full h-screen overflow-y-hidden'>
+    <div id="home" name='home' class='w-full h-screen overflow-y-hidden bg-[#ccd6f6]'>
       <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <div>
-          <p class='text-black text-4xl text-white font-bold inline border-b-4 border-pink-600 '>Cek Reservasi</p>
+          <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>Cek Reservasi</p>
       </div>
           <div class="mt-8 flex flex-col">
             <table class="min-w-full divide-y divide-gray-300">
@@ -23,6 +23,7 @@
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Keberangkatan</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Tujuan</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Tanggal Keberangkatan</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Nomer Kursi</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white">
@@ -31,6 +32,7 @@
                   <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ $rs->jurusan->kota_asal }}</td>
                   <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->jurusan->kota_tujuan }}</td>
                   <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->tanggal_reservasi }}</td>
+                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->seat }}</td>
                 </tr>
                 @endforeach
 

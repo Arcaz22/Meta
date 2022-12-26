@@ -11,7 +11,7 @@
 <body>
     
   <x-app-layout>
-    <div name='feedback' class='w-full h-screen'>
+    <div name='feedback' class='w-full h-screen bg-[#ccd6f6]'>
       <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <div class='sm:text-left pb-8 pl-4'>
           <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>

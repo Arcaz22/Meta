@@ -43,6 +43,7 @@ class ReservasiController extends Controller
         $validatedData = $request->validate([
             'tanggal_reservasi' => 'required|max:255',
             'jurusan_id' => 'required',
+            'seat' => 'required'
         ]);
 
         $validatedData['user_id'] = auth()->user()->id;
