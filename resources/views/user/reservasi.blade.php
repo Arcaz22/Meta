@@ -23,7 +23,7 @@
          </div>
          <div class='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
            <div class="aspect-w-3 aspect-h-2 bg-gray-100 rounded-lg overflow-hidden">
-             <img src="https://tailwindui.com/img/ecommerce-images/incentives-07-hero.jpg" alt="" class="object-center object-cover">
+             <img src="img/seat.png" alt="">
            </div>
            <div class="xl:mt-16">
             <form action="/reservasi" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
