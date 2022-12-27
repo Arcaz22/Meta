@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
+use App\Models\Feedback;
 use App\Models\Jurusan;
 use App\Models\Reservasi;
 use App\Models\User;
@@ -37,7 +38,6 @@ class AdminController extends Controller
         // ]);
 
         $validatedData = $request->validate($rules);
-        $validatedData['user_id'] = auth()->user()->id;
 
         $reservasi = Reservasi::find($id);
 
@@ -51,8 +51,9 @@ class AdminController extends Controller
     public function Dashboard() {
         $jumlah_user = User::count();
         $jumlah_memesan = Reservasi::count();
+        $jumlah_feedback = Feedback::count();
         $user = User::get()->toQuery()->paginate(3);
-        return view('admin.index', compact('user', 'jumlah_user', 'jumlah_memesan'));
+        return view('admin.index', compact('user', 'jumlah_user', 'jumlah_memesan', 'jumlah_feedback'));
     }
 
     public function Login(Request $request) {
@@ -72,7 +73,7 @@ class AdminController extends Controller
 
     public function cekReservasi() {
         return view('admin.cek-reservasi', [
-                    'reservasis' => Reservasi::all()
+                    'reservasis' => Reservasi::get()->toQuery()->paginate(3)
                 ]);
     }
 

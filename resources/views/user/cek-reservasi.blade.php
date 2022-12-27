@@ -17,7 +17,7 @@
           <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>Cek Reservasi</p>
       </div>
           <div class="mt-8 flex flex-col">
-            <table class="min-w-full divide-y divide-gray-300">
+            <table class="min-w-full divide-y divide-gray-300 my-5">
               <thead class="bg-gray-50">
                 <tr>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Keberangkatan</th>
@@ -28,19 +28,21 @@
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white">
                 @foreach ($reservasis as $rs)
-                @if (Auth::id() == $rs->user->id)
-                <tr>
-                  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ $rs->jurusan->kota_asal }}</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->jurusan->kota_tujuan }}</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->tanggal_reservasi }}</td>
-                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->seat }}</td>
-                </tr>
-                @endif
+                  @if (Auth::id() == $rs->user->id)
+                  <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ $rs->jurusan->kota_asal }}</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->jurusan->kota_tujuan }}</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->tanggal_reservasi }}</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->seat }}</td>
+                  </tr>
+                  @endif
                 @endforeach
 
                 <!-- More people... -->
               </tbody>
             </table>
+            
+            {{ $reservasis->links() }}
           </div>
         </div>
       </div>

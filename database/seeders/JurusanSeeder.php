@@ -38,7 +38,7 @@ class JurusanSeeder extends Seeder
             ],
             [
                 'kota_asal' => "Bekasi",
-                'kota_tujuan' => "Karawang3"
+                'kota_tujuan' => "Karawang"
             ],
         ]);
     }

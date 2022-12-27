@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 use Laravel\Socialite\Facades\Socialite;
 
 class GoogleAuthController extends Controller
@@ -19,6 +20,7 @@ class GoogleAuthController extends Controller
         try {
             $user = Socialite::driver('google')->user();
             $findUser = User::where('google_id', $user->getId())->first();
+            $url = URL::asset('img/default.png');
 
             if($findUser)
             {
@@ -29,7 +31,8 @@ class GoogleAuthController extends Controller
                     'name' => $user->getName(),
                     'email' => $user->getEmail(),
                     'google_id' => $user->getId(),
-                    'password' => bcrypt('12345678')
+                    'password' => bcrypt('12345678'),
+                    'picture' => $url,
                 ]);
                 Auth::login($newUser);
                 return redirect()->intended('reservasi');

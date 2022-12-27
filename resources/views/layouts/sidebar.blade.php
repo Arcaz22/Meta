@@ -125,7 +125,7 @@
     </div>
   
     <!-- Content area -->
-    <div class="flex-1 flex flex-col overflow-hidden">
+    <div class="flex-1 flex flex-col overflow-hidden ">
       <header class="w-full">
         <div class="relative z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 shadow-sm flex">
           <button @click="open = true" type="button" class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden">
@@ -162,7 +162,7 @@
       </header>
   
       <!-- Main content -->
-      <div class="flex-1 flex items-stretch overflow-hidden">
+      <div class="flex-1 flex items-stretch overflow-hidden bg-[#ccd6f6]">
         <main class="flex-1 overflow-y-auto">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <section class="mt-8 pb-16">

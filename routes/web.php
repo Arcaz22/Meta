@@ -68,7 +68,7 @@ Route::resource('/reservasi', ReservasiController::class)->middleware(['auth', '
 
 Route::get('/cek-reservasi', function () {
     return view('.user.cek-reservasi', [
-        'reservasis' => Reservasi::all()
+        'reservasis' => Reservasi::get()->toQuery()->paginate(3)
     ]);
 })->middleware(['auth', 'verified'])->name('cek-reservasi');
 

@@ -6,7 +6,7 @@
       <p class='text-4xl text-black font-bold inline border-b-4 border-pink-600'>Cek Reservasi</p>
   </div>
       <div class="mt-8 flex flex-col">
-        <table class="min-w-full divide-y divide-gray-300">
+        <table class="min-w-full divide-y divide-gray-300 my-5">
           <thead class="bg-gray-50">
             <tr>
               <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Nama</th>
@@ -38,6 +38,7 @@
             <!-- More people... -->
           </tbody>
         </table>
+        {{ $reservasis->links() }}
       </div>
     </div>
   </div>

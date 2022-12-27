@@ -1,7 +1,7 @@
 @extends('layouts.sidebar')
 @section('container')
 
-<div class="grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10 ">
+<div class="grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10">
   <!--Grid starts here-->
   <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
     <div>
@@ -37,7 +37,7 @@
     <div>
       <div class="text-sm text-gray-400 ">Jumlah Feedback</div>
       <div class="flex items-center pt-1">
-        <div class="text-3xl font-medium text-gray-600 ">34</div>
+        <div class="text-3xl font-medium text-gray-600 ">{{ $jumlah_feedback }}</div>
       </div>
     </div>
     <div class="text-pink-500">
@@ -50,27 +50,19 @@
     </div>
 </div>
 
-<div class="w-full overflow-x-auto shadow ring-1 ring-black ring-opacity-5 rounded-lg mx-auto mb-5">
+<div class="w-1/2 overflow-x-auto shadow ring-1 ring-black ring-opacity-5 rounded-lg mx-auto mb-5">
   <table class="w-full divide-y divide-gray-300">
     <thead class="bg-gray-50">
       <tr>
         <th scope="col" class="px-4 py-2 text-left text- font-semibold text-gray-900">Nama</th>
         <th scope="col" class="px-4 py-2 text-left text- font-semibold text-gray-900">Role</th>
-        <th scope="col" class="text-left text- font-semibold text-gray-900">Edit</th>
       </tr>
     </thead>
     <tbody class="divide-y divide-gray-200 bg-white">
       @foreach ($user as $akun => $data)
       <tr>
         <td class="whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-900">{{ $data->name }}</td>
-        <td class="whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-900">{{ $data->stauts }}</td>
-        <td class="whitespace-nowrap font-medium text-gray-900">
-          {{-- <form action="{{ route('admin.destroy') }}" method="post">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Hapus</button>
-          </form> --}}
-        </td>
+        <td class="whitespace-nowrap px-4 py-2 text-sm font-medium text-gray-900">{{ $data->role }}</td>
       </tr>
       @endforeach
     </tbody>
