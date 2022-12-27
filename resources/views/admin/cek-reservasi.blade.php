@@ -31,7 +31,7 @@
                 <form action="{{ route('admin.cek-delete', $rs->id) }}" method="post" class="d-inline">
                   @method("DELETE")
                   @csrf
-                  <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span>Hapus</button>
+                  <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')"><span data-feather="x-circle"></span>Delete</button>
                 </form>
               </td>
             </tr>
