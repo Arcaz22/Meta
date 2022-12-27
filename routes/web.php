@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FeedbackContoller;
 use App\Http\Controllers\GoogleAuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReservasiController;
+use App\Models\Feedback;
 use App\Models\Reservasi;
 use Illuminate\Support\Facades\Route;
 
@@ -33,7 +35,9 @@ Route::get('/outlet', function () {
 });
 
 Route::get('/testimoni', function () {
-    return view('home.testimoni');
+    return view('home.testimoni', [
+        'feedback' => Feedback::all()
+    ]);
 });
 Route::get('/about', function () {
     return view('home.about');
@@ -68,6 +72,8 @@ Route::get('/cek-reservasi', function () {
 Route::get('/feedback', function () {
     return view('.user.feedback');
 })->middleware(['auth', 'verified'])->name('feedback');
+
+Route::post('/feedback', [FeedbackContoller::class, 'store'])->middleware(['auth', 'verified'])->name('feedback');
 /*     End User Route */
 
 Route::middleware('auth')->group(function () {
