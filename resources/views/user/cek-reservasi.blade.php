@@ -28,12 +28,14 @@
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white">
                 @foreach ($reservasis as $rs)
+                @if (Auth::id() == $rs->user->id)
                 <tr>
                   <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ $rs->jurusan->kota_asal }}</td>
                   <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->jurusan->kota_tujuan }}</td>
                   <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->tanggal_reservasi }}</td>
                   <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->seat }}</td>
                 </tr>
+                @endif
                 @endforeach
 
                 <!-- More people... -->

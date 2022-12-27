@@ -47,6 +47,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
     Route::get('/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout')->middleware('admin');
     Route::get('/cek-reservasi', [AdminController::class, 'cekReservasi'])->name('admin.cek-reservasi')->middleware('admin');
+    Route::get('/cek-reservasi/{id}/edit', [AdminController::class, 'edit'])->name('admin.cek-edit')->middleware('admin');
+    Route::match(['put', 'patch'], '/cek-reservasi/{id}', [AdminController::class, 'update'])->name('admin.cek-update')->middleware('admin');
+    Route::delete('/cek-reservasi/{id}', [AdminController::class, 'delete'])->name('admin.cek-delete')->middleware('admin');
     // Route::get('/register', [AdminController::class, 'AdminRegister'])->name('admin.register');
     // Route::post('/register/create', [AdminController::class, 'AdminRegisterCreate'])->name('admin.register.create');
 });

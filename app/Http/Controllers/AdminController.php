@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Admin;
+use App\Models\Jurusan;
 use App\Models\Reservasi;
 use App\Models\User;
 use Carbon\Carbon;
@@ -14,6 +15,37 @@ class AdminController extends Controller
 {
     public function Index() {
         return view('admin.admin_login');
+    }
+
+    public function edit($id) {
+        return view('admin.edit', [
+            'reservasi' => Reservasi::find($id),
+            'jurusans' => Jurusan::all()
+        ]);
+    }
+
+    public function update(Request $request, $id) {
+        $rules = [
+            'tanggal_reservasi' => 'required|max:255',
+            'jurusan_id' => 'required',
+            'seat' => 'required'
+        ];
+        // $validatedData = $request->validate([
+        //     'tanggal_reservasi' => 'required|max:255',
+        //     'jurusan_id' => 'required',
+        //     'seat' => 'required'
+        // ]);
+
+        $validatedData = $request->validate($rules);
+        $validatedData['user_id'] = auth()->user()->id;
+
+        $reservasi = Reservasi::find($id);
+
+        // dd($validatedData);
+
+        Reservasi::where('id', $reservasi->id)->update($validatedData);
+
+        return redirect('/admin/cek-reservasi')->with('success', 'Berhasil memesan tiket');
     }
 
     public function Dashboard() {
@@ -39,7 +71,17 @@ class AdminController extends Controller
     }
 
     public function cekReservasi() {
-        return view('admin.cek-reservasi');
+        return view('admin.cek-reservasi', [
+                    'reservasis' => Reservasi::all()
+                ]);
+    }
+
+    public function delete($id) {
+        // Reservasi::destroy($reservasi->id);
+        $reservasi = Reservasi::find($id);
+        $reservasi->delete();
+
+        return redirect()->route('admin.cek-reservasi')->with('error', 'Admin Logout Successfully');
     }
 
     // public function destroy(User $user) {
