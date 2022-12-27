@@ -13,6 +13,7 @@
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Keberangkatan</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Tujuan</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Tanggal</th>
+              <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">No Kursi</th>
               <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Aksi</th>
             </tr>
           </thead>
@@ -23,6 +24,7 @@
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->jurusan->kota_asal }}</td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->jurusan->kota_tujuan }}</td>
               <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->tanggal_reservasi }}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->seat }}</td>
               <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                 <a href="cek-reservasi/{{ $rs->id }}/edit" class="pr-1 text-indigo-600 hover:text-indigo-900">Edit</a>
                 {{-- <button class="pl-1"><a href="#" class="text-indigo-600 hover:text-indigo-900">Hapus</a></button> --}}
