@@ -31,7 +31,9 @@
             </div>
             <div class="mt-6 flex justify-center">
               <button type="button" class="inline-flex items-center px-2 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <p class="text-sm">LIHAT DI MAP</p> 
+                <a href="https://www.google.com/maps?q=maps+btc+bandung&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi_t7i14578AhU2-jgGHTBfCooQ_AUoAXoECAEQAw">
+                  <p class="text-sm">LIHAT DI MAP</p> 
+                </a>
                </button>
             </div>
           </div>
@@ -59,7 +61,9 @@
             </div>
             <div class="mt-6 flex justify-center">
               <button type="button" class="inline-flex items-center px-2 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <p class="text-sm">LIHAT DI MAP</p> 
+                <a href="https://www.google.com/maps/place/Karawang+Central+Plaza/@-6.3277574,107.2906066,17z/data=!3m1!4b1!4m5!3m4!1s0x2e69762a4689b0ff:0xb5a99060a9bc59b1!8m2!3d-6.3277574!4d107.2927953">
+                  <p class="text-sm">LIHAT DI MAP</p> 
+                </a>
                </button>
             </div>
           </div>
@@ -87,7 +91,9 @@
             </div>
             <div class="mt-6 flex justify-center">
               <button type="button" class="inline-flex items-center px-2 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                <p class="text-sm">LIHAT DI MAP</p> 
+                <a href="https://www.google.com/maps/search/maps+MALL+LIPPO+CIKARANG/@-6.3340977,107.1348117,17z/data=!3m1!4b1">
+                  <p class="text-sm">LIHAT DI MAP</p> 
+                </a>  
                </button>
             </div>
           </div>
