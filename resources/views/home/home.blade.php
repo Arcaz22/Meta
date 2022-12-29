@@ -9,10 +9,10 @@
     <br>
 
     <h4 class=' font-sans text-gray-600 py-4 max-w-[700px]'>
-      MetaTrans merupakan jasa transportasi antar kota point to point dengan jam keberangkatan terjadwal sehingga bisa memilih jadwal sesuai kebutuhan dilengkapi dengan custom seat yang nyaman yang dapat dipesan secara online.
+      MetaTrans merupakan jasa transportasi antar kota point to point dengan tanggal keberangkatan terjadwal sehingga bisa memilih jadwal sesuai kebutuhan dilengkapi dengan custom seat yang nyaman yang dapat dipesan secara online.
     </h4>
     <div>
-      <a class="leading-none" href="/reservasi">
+      <a class="leading-none" href="/login">
         <button 
           class='text-slate-500 group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 hover:text-white'>
         Booking!

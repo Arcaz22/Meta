@@ -13,7 +13,7 @@
   <ul
     class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
     <li>
-      <a class=" text-sm text-rose-200 hover:text-rose-50" href="/">HOME</a>
+      <a class=" text-sm text-rose-50 hover:text-rose-200" href="/">HOME</a>
     </li>
     <li class="text-gray-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
@@ -22,7 +22,7 @@
           d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
       </svg>
     </li>
-    <li><a class="text-sm text-rose-200 hover:text-rose-50" href="/about">ABOUT US</a></li>
+    <li><a class="text-sm text-rose-50 hover:text-rose-200" href="/about">ABOUT US</a></li>
     <li class="text-gray-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
         viewBox="0 0 24 24">
@@ -30,7 +30,7 @@
           d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
       </svg>
     </li>
-    <li><a class="text-sm text-rose-200 hover:text-rose-50" href="/fasilitas">FASILITAS</a></li>
+    <li><a class="text-sm text-rose-50 hover:text-rose-200" href="/fasilitas">FASILITAS</a></li>
     <li class="text-gray-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
         viewBox="0 0 24 24">
@@ -38,7 +38,7 @@
           d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
       </svg>
     </li>
-    <li><a class="text-sm text-rose-200 hover:text-rose-50" href="/outlet">OUTLET</a></li>
+    <li><a class="text-sm text-rose-50 hover:text-rose-200" href="/outlet">OUTLET</a></li>
     <li class="text-gray-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
         viewBox="0 0 24 24">
@@ -46,7 +46,7 @@
           d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
       </svg>
     </li>
-    <li><a class="text-sm text-rose-200 hover:text-rose-50" href="/testimoni">TESTIMONI</a></li>
+    <li><a class="text-sm text-rose-50 hover:text-rose-200" href="/testimoni">TESTIMONI</a></li>
   </ul>
   <a class="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200"
     href=" {{ route('login') }}">Members</a>
@@ -68,24 +68,24 @@
     <div>
       <ul>
         <li class="mb-1">
-          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-gray-700 rounded"
+          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
             href="/">Home</a>
         </li>
         <li class="mb-1">
-          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-gray-700 rounded"
+          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
             href="/about">About us</a>
         </li>
         <li class="mb-1">
-          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-gray-700 rounded"
+          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
             href="/fasilitas">Fasilitas</a>
         </li>
         <li class="mb-1">
-          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-gray-700 rounded"
+          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
             href="/outlet">Oulet</a>
         </li>
         <li class="mb-1">
-          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-gray-700 rounded"
-            href="/testimoni">Testimonials</a>
+          <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
+            href="/testimoni">Testimoni</a>
         </li>
       </ul>
     </div>
