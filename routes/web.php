@@ -42,6 +42,17 @@ Route::get('/testimoni', function () {
 Route::get('/about', function () {
     return view('home.about');
 });
+Route::get('/bandung', function () {
+    return view('home.bandung');
+});
+Route::get('/karawang', function () {
+    return view('home.karawang');
+});
+Route::get('/bekasi', function () {
+    return view('home.bekasi');
+});
+
+
 /*     End Landing Page      */
 
 /*      Admin Route      */
