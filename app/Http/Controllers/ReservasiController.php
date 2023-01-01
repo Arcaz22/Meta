@@ -50,7 +50,7 @@ class ReservasiController extends Controller
 
         Reservasi::create($validatedData);
 
-        return redirect('/reservasi')->with('success', 'Berhasil memesan tiket');
+        return redirect('/cek-reservasi')->with('success', 'Berhasil memesan tiket');
     }
 
     /**

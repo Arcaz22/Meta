@@ -13,6 +13,7 @@
     <x-app-layout>
     <div id="home" name='home' class='w-full h-screen overflow-y-hidden bg-[#ccd6f6]'>
       <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+        <x-auth-session-status class="mb-4" :status="session('success')" />
         <div>
           <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>Cek Reservasi</p>
       </div>

@@ -21,9 +21,9 @@
                 <div class="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
                   <a href="/">
                     <img
-                      src="img/logo_mt.png"
-                      class="w-full mt-8"
-                      alt="Sample image"
+                      src="img/logogo.png"
+                      class="w-full bg-[#0a192f]"
+                      alt="logo"
                     />
                   </a>
                 </div>

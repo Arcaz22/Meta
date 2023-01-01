@@ -30,7 +30,6 @@
       <div class='flex flex-col justify-center items-center w-full h-full'>
         <div class='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
           <div class='sm:text-left pb-8 pl-4'>
-           <x-auth-session-status class="mb-4" :status="session('success')" />
            <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>
              Pesan Travel
            </p>

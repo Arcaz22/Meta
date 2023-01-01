@@ -53,7 +53,8 @@ class AdminController extends Controller
         $jumlah_memesan = Reservasi::count();
         $jumlah_feedback = Feedback::count();
         $user = User::get()->toQuery()->paginate(3);
-        return view('admin.index', compact('user', 'jumlah_user', 'jumlah_memesan', 'jumlah_feedback'));
+        $feedback = Feedback::get()->toQuery()->paginate(3);
+        return view('admin.index', compact('user', 'feedback', 'jumlah_user', 'jumlah_memesan', 'jumlah_feedback'));
     }
 
     public function Login(Request $request) {

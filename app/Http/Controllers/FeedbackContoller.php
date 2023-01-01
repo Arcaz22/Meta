@@ -20,6 +20,6 @@ class FeedbackContoller extends Controller
 
         Feedback::create($validatedData);
 
-        return redirect('/feedback')->with('success', 'Berhasil memesan tiket');
+        return redirect('/feedback')->with('komen', 'Feedback terkirim');
     }
 }

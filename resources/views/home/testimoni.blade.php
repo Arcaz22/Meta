@@ -20,8 +20,7 @@
         <div class="mb-0">
           <div class="flex justify-center mb-6">
             <img
-              src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
-              class="rounded-full shadow-lg w-32"
+              src="{{ $fb->user->picture }}"
             />
           </div>
           <h4 class="text-xl font-semibold mb-4">{{ $fb->user->name }}</h4>
