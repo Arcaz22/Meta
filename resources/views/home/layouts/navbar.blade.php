@@ -1,6 +1,6 @@
 <nav class="bg-[#0a192f] fixed w-full h-[60px] flex justify-between items-center px-4 shadow-md">
   <a class="text-3xl font-bold leading-none" href="/reservasi">
-    <img class="h-10 w-15 rounded-sm ml-12" src="img/logo-1.png" alt="">
+    <img class="h-35 w-24 ml-20 pt-2 " src="img/logogo.png" alt="">
   </a>
   <div class="lg:hidden">
     <button class="navbar-burger flex items-center text-rose-200 p-3">
@@ -49,14 +49,15 @@
     <li><a class="text-sm text-rose-50 hover:text-rose-200" href="/testimoni">TESTIMONI</a></li>
   </ul>
   <a class="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200"
-    href=" {{ route('login') }}">Members</a>
+    href=" {{ route('login') }}">Login</a>
 </nav>
+
 <div class="navbar-menu relative z-50 hidden">
   <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-[#0a192f] border-r overflow-y-auto">
     <div class="flex items-center mb-8">
       <a class="mr-auto text-3xl font-bold leading-none" href="/reservasi">
-        <img class="" src="img/logo-1.png" alt="">
+        <img class="h-40 w-25 " src="img/logogo.png" alt="">
       </a>
       <button class="navbar-close">
         <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
@@ -69,30 +70,30 @@
       <ul>
         <li class="mb-1">
           <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
-            href="/">Home</a>
+            href="/">HOME</a>
         </li>
         <li class="mb-1">
           <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
-            href="/about">About us</a>
+            href="/about">ABOUT US</a>
         </li>
         <li class="mb-1">
           <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
-            href="/fasilitas">Fasilitas</a>
+            href="/fasilitas">FASILITAS</a>
         </li>
         <li class="mb-1">
           <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
-            href="/outlet">Oulet</a>
+            href="/outlet">OUTLET</a>
         </li>
         <li class="mb-1">
           <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-[#ccd6f6] hover:text-[#0a192f] rounded"
-            href="/testimoni">Testimoni</a>
+            href="/testimoni">TESTIMONI</a>
         </li>
       </ul>
     </div>
     <div class="mt-auto">
       <div class="pt-6">
         <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
-          href="{{ route('login') }}">Members</a>
+          href="{{ route('login') }}">Login</a>
       </div>
     </div>
   </nav>
