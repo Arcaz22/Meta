@@ -1,7 +1,7 @@
 @extends('home.layouts.main')
 @section('container')
 
-<div id="contact" name='contact' class='flex justify-center items-center p-6'>
+<div id="contact" name='contact' class='text-gray-600 flex justify-center items-center p-6 h-screen'>
   <div class="text-center pt-0 max-w-3xl mx-auto pb-4">
 
     <div class="mt-20">
@@ -11,7 +11,7 @@
     <section class="mb-20 text-gray-700">
       <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto">
         <p class="pt-10  mb-6 pb-2 md:mb-12 md:pb-0">
-          TestTing
+         
         </p>
       </div>
     

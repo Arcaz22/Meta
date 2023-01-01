@@ -4,7 +4,7 @@
 <div id="home" name='home' class='w-full h-screen bg-[#ccd6f6]'>
   <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
     <div>
-      <h1 class='text-4xl sm:text-7xl font-bold font-serif inline border-b-4 border-pink-600 '>MetaTrans</h1>
+      <h1 class='text-6xl sm:text-8xl font-bold font-serif inline border-b-4 border-pink-600 '>MetaTrans</h1>
     </div>
     <br>
 
@@ -14,7 +14,7 @@
     <div>
       <a class="leading-none" href="/login">
         <button 
-          class='text-slate-500 group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 hover:text-white'>
+          class='text-slate-700 group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 hover:text-white'>
         Booking!
           <span class='group-hover:rotate-90 duration-300'>
             <HiArrowNarrowRight class='ml-3 ' />
