@@ -12,56 +12,35 @@
 <body>
   
   <section class="h-screen">
-    <div class="px-6 h-full text-gray-800">
-      <div class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
-        <div class="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
-          <a href="/">
-            <img
-            src="/img/meta.png"
-            class="w-full"
-            alt="Sample image"
-          />
-          </a>
-        </div>
-        <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-          <x-auth-session-status class="mb-4" :status="session('error')" />
-  
-          <form action="{{ route('admin.login') }}" class="d-block" method="post">
-            @csrf
-  
-            <!-- Email input -->
-            <div class="mb-6">
-              <input
-                name="email"
-                type="text"
-                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                placeholder="Email address"
-              />
-            </div>
-  
-            <!-- Password input -->
-            <div class="mb-6">
-              <input
-                name="password"
-                type="password"
-                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                placeholder="Password"
-              />
-            </div>
-  
-            <div class="text-center lg:text-left">
-              <button
-                type="submit"
-                class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                "
-              >
-                Login
-              </button>
-            </div>
-          </form>
-        </div>
+
+    <!-- component -->
+<div class="flex h-screen w-full items-center justify-center bg-cover bg-no-repeat bg-[#0a192f]">
+  <div class="rounded-xl bg-[#ccd6f6] bg-opacity-70 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+    <div class="text-white">
+      <div class="mb-8 flex flex-col items-center">
+        <a href="/">
+          <img src="/img/meta.png" class="h-40 w-40 rounded-sm"alt="Sample image"/>
+        </a>
+        {{-- <h3 class="mb-2 text-lg font-sans font-bold pt-2">Welcome back, Admin</h3> --}}
+        <p class="text-slate-600 pt-5">Please login to your account</p>
       </div>
+        <x-auth-session-status class="mb-4" :status="session('error')" />
+            <form action="{{ route('admin.login') }}" class="d-block" method="post">
+              @csrf
+        <div class="mb-4 text-lg">
+          <input class="rounded-3xl border-none bg-yellow-500 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-100 shadow-lg outline-none backdrop-blur-md" type="email" name="email" placeholder="username" />
+        </div>
+
+        <div class="mb-4 text-lg">
+          <input class="rounded-3xl border-none bg-yellow-500 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-100 shadow-lg outline-none backdrop-blur-md" type="password" name="password" placeholder="password" />
+        </div>
+        <div class="mt-8 flex justify-center text-lg text-black">
+          <button type="submit" class="rounded-3xl bg-pink-700  px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-pink-900">Login</button>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
   </section>
 
 </body>
