@@ -9,7 +9,7 @@
         <!-- Login Container -->
         <div class="mr-50 min-w-fit flex-col border bg-white px-14 py-14 shadow-md rounded-[4px] ">
         <div class="mb-8 flex justify-center">
-            <p>Login </p>
+            <h3 class="font-bold">Sign in to your account</h3>
         </div>
         <div class="flex flex-col text-sm rounded-md">
             <x-input-label for="email" :value="__('Email')" />
@@ -20,9 +20,11 @@
             <x-text-input id="password" class="border rounded-[4px] p-3 hover:outline-none focus:outline-none hover:border-yellow-500" type="password" name="password" required autocomplete="current-password" />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-        <x-primary-button class="text-center mt-5 w-full border p-2  bg-gradient-to-r from-gray-800 bg-gray-500 text-white rounded-[4px] hover:bg-slate-400 scale-105 duration-300">
+        <div class="pt-8 ml-10">
+        <x-primary-button class=" rounded-3xl bg-gray-700  px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-gray-900">
             {{ __('Log in') }}
         </x-primary-button>
+        </div>
 
         <div class="mt-5 flex justify-between text-sm text-gray-600">
             @if (Route::has('password.request'))
