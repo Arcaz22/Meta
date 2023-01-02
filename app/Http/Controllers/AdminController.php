@@ -45,7 +45,7 @@ class AdminController extends Controller
 
         Reservasi::where('id', $reservasi->id)->update($validatedData);
 
-        return redirect('/admin/cek-reservasi')->with('success', 'Berhasil memesan tiket');
+        return redirect('/admin/cek-reservasi')->with('success', 'Berhasil mengedit tiket');
     }
 
     public function Dashboard() {
@@ -74,7 +74,7 @@ class AdminController extends Controller
 
     public function cekReservasi() {
         return view('admin.cek-reservasi', [
-                    'reservasis' => Reservasi::get()->toQuery()->paginate(3)
+                    'reservasis' => Reservasi::paginate(3)
                 ]);
     }
 

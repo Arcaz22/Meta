@@ -14,9 +14,12 @@
       <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <x-auth-session-status class="mb-4" :status="session('success')" />
         <div>
-          <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>Cek Reservasi</p>
+          <p class='text-black text-4xl font-bold inline border-b-4 border-pink-600'>Cek Reservasis</p>
+
+        
       </div>
           <div class="mt-8 flex flex-col">
+
             <table class="min-w-full divide-y divide-gray-300 my-5">
               <thead class="bg-gray-50">
                 <tr>
