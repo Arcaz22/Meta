@@ -22,7 +22,7 @@ class AdminController extends Controller
         return view('admin.edit', [
             'reservasi' => Reservasi::find($id),
             'jurusans' => Jurusan::all()
-        ])->with('edit', 'Berhasil mengubah tiket');
+        ]);
     }
 
     public function update(Request $request, $id) {
