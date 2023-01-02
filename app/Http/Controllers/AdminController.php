@@ -22,7 +22,7 @@ class AdminController extends Controller
         return view('admin.edit', [
             'reservasi' => Reservasi::find($id),
             'jurusans' => Jurusan::all()
-        ]);
+        ])->with('edit', 'Berhasil mengubah tiket');
     }
 
     public function update(Request $request, $id) {
@@ -61,15 +61,15 @@ class AdminController extends Controller
         // dd($request->all());
         $check = $request->all();
         if(Auth::guard('admin')->attempt(['email' => $check['email'], 'password' => $check['password'] ])){
-            return redirect()->route('admin.dashboard')->with('error', 'Admin Login Successfully');
+            return redirect()->route('admin.dashboard')->with('berhasil', 'Admin berhasil login');
         } else {
-            return back()->with('error', 'Invalid Email Or Password');
+            return back()->with('error', 'Email Atau Password Salah');
         }
     }
 
-    public function AdminLogout() {
+    public function AdminLogout() { 
         Auth::guard('admin')->logout();
-        return redirect()->route('login')->with('error', 'Admin Logout Successfully');
+        return redirect('/admin/login')->with('keluar', 'Admin berahasil keluar');
     }
 
     public function cekReservasi() {
@@ -83,7 +83,7 @@ class AdminController extends Controller
         $reservasi = Reservasi::find($id);
         $reservasi->delete();
 
-        return redirect()->route('admin.cek-reservasi')->with('error', 'Admin Logout Successfully');
+        return redirect()->route('admin.cek-reservasi')->with('error', 'Admin berhasil keluar');
     }
 
     // public function destroy(User $user) {

@@ -1,6 +1,7 @@
-@extends('layouts.sidebar')
+@extends('admin.layouts.sidebar')
 @section('container')
 
+<x-auth-session-status class="mb-4" :status="session('berhasil')" />
 <div class="grid lg:grid-cols-3 sm:grid-cols-2 p-4 gap-10">
   <!--Grid starts here-->
   <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">

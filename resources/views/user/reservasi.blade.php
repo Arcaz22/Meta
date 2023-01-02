@@ -5,28 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reservasi</title>
+    <link rel="stylesheet" href="{{ asset('css/seat.css') }}">
     @vite('resources/css/app.css')
 </head>
-  <style>
-    .seat, .driver {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    height: 50px;
-    text-align: center;
-    width: 50px;
-    border-radius: 25%;
-  }
-  .seat.selected {
-    background-color: #3182ce;
-    color: #fff;
-  }
-
-  </style>
 <body>
     
   <x-app-layout>
-    <div name='about' class='w-full xl:h-screen text-gray-300 bg-[#ccd6f6]'>
+    <div name='reservasi' class='w-full xl:h-screen text-gray-300 bg-[#ccd6f6]'>
       <div class='flex flex-col justify-center items-center w-full h-full'>
         <div class='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
           <div class='sm:text-left pb-8 pl-4'>
@@ -43,45 +28,45 @@
                       <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
                     </svg>
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 seat">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>1
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 seat">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>2
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 opacity-0">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>3
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 opacity-0">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>4
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 seat">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>5
+                    </svg>3
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 seat">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>6
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 seat">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>7
+                    </svg>5
                   </div>
-                  <div class="col-span-1 seat">
+                  <div class="font-bold col-span-1 seat">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>8
+                    </svg>4
                   </div>
               </div>
            </div>
@@ -89,7 +74,9 @@
             <form action="/reservasi" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
               @csrf
               <div class="sm:col-span-2">
-                <label for="jurusan" class="block text-sm font-medium text-gray-700">Jurusan</label>
+                <label for="jurusan" class="block text-sm font-medium text-gray-700">
+                  <b>Jurusan</b>
+                </label>
                 <div class="mt-1">
                   <select id="country" name="jurusan_id" class="text-gray-500 focus:ring-indigo-500 focus:border-indigo-500 rounded-md w-full">
                     @foreach ($jurusans as $jurusan)
@@ -103,7 +90,9 @@
                 </div>
               </div>
               <div class="sm:col-span-2">
-                <label for="tanggal_keberangkatan" class="block text-sm font-medium text-gray-700">Tanggal Keberangkatan</label>
+                <label for="tanggal_keberangkatan" class="block text-sm font-medium text-gray-700">
+                  <b>Tanggal Keberangkatan</b>
+                </label>
                 <div class="mt-1">
                   <input id="tanggal_reservasi" name="tanggal_reservasi" type="date" autocomplete="tanggal_keberangkatan" class="py-3 px-4 block shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md w-full">
                 </div>
@@ -124,23 +113,7 @@
    </div>
   </x-app-layout>
 
-  <script>
-    const seats = document.querySelectorAll(".seat");
-    let selectedSeat;
-
-    seats.forEach((seat) =>
-      seat.addEventListener("click", (e) => {
-        if (selectedSeat) {
-          selectedSeat.classList.remove("selected");
-        }
-        selectedSeat = e.target;
-        selectedSeat.classList.add("selected");
-        console.log(`Selected seat: ${selectedSeat.textContent}`);
-        document.getElementById('seat-number').value = selectedSeat.textContent;
-      })
-      
-    );
-  </script>
+  <script src="{{ asset('js/seat.js') }}"></script>
 </body>
 </html>
 

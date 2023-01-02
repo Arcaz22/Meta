@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cek Reservasi</title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     @vite('resources/css/app.css')
 </head>
 <body>
@@ -21,10 +20,10 @@
             <table class="min-w-full divide-y divide-gray-300 my-5">
               <thead class="bg-gray-50">
                 <tr>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Keberangkatan</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Tujuan</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Tanggal Keberangkatan</th>
-                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Nomer Kursi</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Keberangkatan</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Tujuan</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Tanggal Keberangkatan</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Nomer Kursi</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white">

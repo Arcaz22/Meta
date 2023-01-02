@@ -1,4 +1,4 @@
-@extends('layouts.sidebar')
+@extends('admin.layouts.sidebar')
 @section('container')
 
   <div class='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
@@ -6,6 +6,7 @@
       <p class='text-4xl text-black font-bold inline border-b-4 border-pink-600'>Cek Reservasi</p>
   </div>
       <div class="mt-8 flex flex-col">
+        <x-auth-session-status class="mb-4" :status="session('edit')" />
         <table class="min-w-full divide-y divide-gray-300 my-5">
           <thead class="bg-gray-50">
             <tr>

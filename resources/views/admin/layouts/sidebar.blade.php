@@ -5,25 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Dashboard Admin</title>
+  <link rel="stylesheet" href="{{ asset('css/seat.css') }}">
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
   @vite('resources/css/app.css')
-  <style>
-    .seat, .driver {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    height: 50px;
-    text-align: center;
-    width: 50px;
-    border-radius: 25%;
-  }
-  .seat.selected {
-    background-color: #3182ce;
-    color: #fff;
-  }
-
-  </style>
 </head>
 <body class="h-full overflow-hidden">
   
@@ -155,6 +140,8 @@
       
     </div>
   </div>
+
+  <script src="{{ asset('js/seat.js') }}"></script>
 </body>
 </html>
 

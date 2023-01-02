@@ -1,0 +1,15 @@
+.seat,
+.driver {
+    background-color: #3182ce;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    width: 50px;
+    border-radius: 25%;
+}
+
+.seat.selected {
+    background-color: #fff;
+    color: #000;
+}

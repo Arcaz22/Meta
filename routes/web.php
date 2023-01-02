@@ -36,7 +36,7 @@ Route::get('/outlet', function () {
 
 Route::get('/testimoni', function () {
     return view('home.testimoni', [
-        'feedback' => Feedback::all()
+        'feedback' => Feedback::latest()->paginate(3)
     ]);
 });
 Route::get('/about', function () {
