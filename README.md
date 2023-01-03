@@ -1,66 +1,66 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# **META TIM**
+**<img alt="MetaTim" width="200" src="public/img/meta.png">**
+## _Tugas Besar Praktikum WEB 20221_
+---
+> *Anggota*
+* Chandra Arcychan Azfar – 203040151
+* Jhonatan Karakaray – 183040059
+*	Dian Nurcahya Ningrum 203040124
+* Akbar Maulana – 203040136
+* M.Tegar Nurul Fuad Rosmali – 203040150
+---
+> _Built With_
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Tailwind][Tailwind.com]][Tailwilnd-url]
+---
+## _Booking Travel_
+> *Summary* 
+<p>Seiring dengan perkembangan teknologi, banyak perusahaan jasa transportasi atau travel yang membuat website agar mempermudah para penumpangnya dalam memesan tiket secara online. Dikarenakan mayoritas di dalam kelompok bukan orang Bandung dan menggunakan travel untuk datang ke Bandung maka kami mengambil tema dalam pembuatan website ini tentang pemesanan travel.<p>
+<p>MetaTrans merupakan jasa transportasi antar kota point to point yang dapat dipesan secara online. 
+Pada website ini terdapat fitur CRUD, yaitu</p> 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+* create, untuk reservasi berupa memilih kursi dan tanggal keberangkatan 
+* read, untuk menampilkan hasil dari reservasi
+* update, untuk mengubah data apabila ada kesalahan dalam pemesanan 
+* delete, untuk menghapus data yang sudah dipesan
+---
 
-## About Laravel
+## _Installation_
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Arcaz22/Meta.git
+   ```
+2. Install Composer
+   ```sh
+   composer update
+   ```
+3. Buat `.env`
+   ```sh
+   cp .env.example .env
+   ```   
+4. Generate `.env`
+   ```js
+   php artisan key:generate
+   ```
+5. Install node Modules
+   ```js
+   npm install
+   ```
+--- 
+## _Running_
+Buka di terminal code editor
+   ```sh
+   php artisan migrate:fresh --seed
+   ```
+   ```sh
+   php artisan serve
+   ```
+   ```sh
+   npm run dev
+   ```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[Tailwind.com]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwilnd-url]: https://tailwindcss.com/
