@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
   <link href="./dist/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   @vite('resources/css/app.css')
 </head>
 

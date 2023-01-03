@@ -20,6 +20,7 @@
         <div class="mb-0">
           <div class="flex justify-center mb-6">
             <img
+              class="rounded-full"
               src="{{ $fb->user->picture }}"
             />
           </div>

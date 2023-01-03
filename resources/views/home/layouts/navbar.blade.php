@@ -49,7 +49,7 @@
     <li><a class="text-sm text-rose-50 hover:text-rose-200" href="/testimoni">TESTIMONI</a></li>
   </ul>
   <a class="hidden lg:inline-block py-2 px-6 bg-blue-600 hover:bg-blue-700 text-sm text-white font-bold rounded-xl transition duration-200"
-    href=" {{ route('login') }}">Login</a>
+    href=" {{ route('login') }}">Sign In</a>
 </nav>
 
 <div class="navbar-menu relative z-50 hidden">
@@ -93,7 +93,7 @@
     <div class="mt-auto">
       <div class="pt-6">
         <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
-          href="{{ route('login') }}">Login</a>
+          href="{{ route('login') }}">Sign In</a>
       </div>
     </div>
   </nav>

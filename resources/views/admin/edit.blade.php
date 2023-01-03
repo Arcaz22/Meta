@@ -78,16 +78,26 @@
               </select>
             </div>
           </div>
-          <div class="sm:col-span-2">
-            <label for="tanggal_keberangkatan" class="block text-sm font-medium text-gray-700">Tanggal Keberangkatan</label>
+          <div>
+            <label for="tanggal_keberangkatan" class="block text-sm font-medium text-gray-700">
+              <b>Tanggal Keberangkatan</b>
+            </label>
             <div class="mt-1">
-              <input id="tanggal_reservasi" name="tanggal_reservasi" type="date" autocomplete="tanggal_keberangkatan" class="py-3 px-4 block shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md w-full" value="{{ $reservasi->tanggal_reservasi }}">
+              <input id="tanggal_reservasi" name="tanggal_reservasi" type="date" autocomplete="tanggal_keberangkatan" class="py-3 px-4 block shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md w-full" value="{{ old('tanggal_reservasi', $reservasi->tanggal_keberangkatan) }}">
+            </div>
+          </div>
+          <div>
+            <label for="waktu" class="block text-sm font-medium text-gray-700">
+              <b>Waktu</b>
+            </label>
+            <div class="mt-1">
+              <input id="waktu" name="waktu" type="time" autocomplete="waktu" class="py-3 px-4 block shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md w-full" value="{{ old('waktu', $reservasi->waktu) }}">
             </div>
           </div>
           <div class="opacity-0">
             <label for="seat-number" class="block text-sm font-medium text-gray-700">Seat</label>
             <div class="mt-1">
-              <input type="text" id="seat-number" value="" name="seat" type="text" autocomplete="seat" class="py-3 px-4 block shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md w-full">
+              <input type="text" id="seat-number" value="" name="seat" type="text" autocomplete="seat" class="py-3 px-4 block shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md w-full" value="{{ old('seat', $reservasi->seat) }}">
             </div>
           </div>
           <div>

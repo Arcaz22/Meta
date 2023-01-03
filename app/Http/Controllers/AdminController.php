@@ -45,7 +45,7 @@ class AdminController extends Controller
 
         Reservasi::where('id', $reservasi->id)->update($validatedData);
 
-        return redirect('/admin/cek-reservasi')->with('success', 'Berhasil mengedit tiket');
+        return redirect('/admin/cek-reservasi')->with('success', 'Tiket berhasil diubah');
     }
 
     public function Dashboard() {
@@ -69,7 +69,7 @@ class AdminController extends Controller
 
     public function AdminLogout() { 
         Auth::guard('admin')->logout();
-        return redirect('/admin/login')->with('keluar', 'Admin berahasil keluar');
+        return redirect('/admin/login')->with('keluar', 'Admin berhasil keluar');
     }
 
     public function cekReservasi() {
@@ -83,7 +83,7 @@ class AdminController extends Controller
         $reservasi = Reservasi::find($id);
         $reservasi->delete();
 
-        return redirect()->route('admin.cek-reservasi')->with('error', 'Admin berhasil keluar');
+        return redirect()->route('admin.cek-reservasi')->with('hapus', 'Pesanan user dihapus');
     }
 
     // public function destroy(User $user) {

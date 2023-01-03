@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->date('tanggal_reservasi');
+            $table->time('waktu');
             $table->foreignId('jurusan_id');
             $table->integer('seat')->nullable();
             $table->timestamps();

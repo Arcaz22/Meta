@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <title>Cek Reservasi</title>
     @vite('resources/css/app.css')
 </head>
@@ -26,6 +27,7 @@
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Keberangkatan</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Tujuan</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Tanggal Keberangkatan</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Waktu</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-bold text-gray-900">Nomer Kursi</th>
                 </tr>
               </thead>
@@ -36,6 +38,7 @@
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">{{ $rs->jurusan->kota_asal }}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->jurusan->kota_tujuan }}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->tanggal_reservasi }}</td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->waktu }}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $rs->seat }}</td>
                   </tr>
                   @endif
